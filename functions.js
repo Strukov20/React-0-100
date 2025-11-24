@@ -63,3 +63,23 @@ function getMathResult(number, length) {
 console.log(getMathResult(5, 3));
 console.log(getMathResult(0, 3));
 console.log(getMathResult(3, 10));
+
+// -----------------
+
+const fruts = 'SOME QWER';
+console.log(fruts.indexOf('Q'));
+
+const logg = 'Hello world';
+console.log(logg.slice(3, 5));
+console.log(logg.substring(4, 8));
+console.log(logg.substr(4, 8));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
+
+
+//Functions - advanced

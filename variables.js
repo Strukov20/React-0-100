@@ -177,8 +177,6 @@ for (let i = 1; i <= 3; i++) {
           } else {
             console.log('error');
             i--;
-          }
-    
-          
+          }        
 }
     

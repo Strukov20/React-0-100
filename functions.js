@@ -83,3 +83,86 @@ console.log(parseFloat(test));
 
 
 //Functions - advanced
+function calculateVolumeAndArea(length) {
+    //let length = prompt('Enter length:','')
+    const volume = length * length * length
+    const area = length * length * 6;
+    
+    if(length >= 0 && typeof(length) === 'number' && Number.isInteger(length) === true) {
+        console.log(`Объем куба: ${volume}, площадь всей поверхности: ${area}`)
+        return (`Объем куба: ${volume}, площадь всей поверхности: ${area}`)
+    } else {
+        console.log('При вычислении произошла ошибка')
+        return ('При вычислении произошла ошибка')
+    }
+}
+
+calculateVolumeAndArea(5.5)
+
+function getCoupeNumber(slotNumber) {
+
+    if (typeof (slotNumber) !== 'number' || slotNumber < 0 || !Number.isInteger(slotNumber)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    }
+
+    if (slotNumber === 0 ) {
+        return "Таких мест в вагоне не существует";
+    }
+
+    if (slotNumber > 36) {
+        return "Таких мест в вагоне не существует";
+    }
+
+    return Math.ceil(slotNumber / 4);
+}
+getCoupeNumber(3)
+
+function getTimeFromMinutes(time) {
+    let hour = Math.floor(time / 60);
+    let minutes = time % 60;
+
+    if (typeof(time) !== 'number' || time < 0 || !Number.isInteger(time)) {
+        return "Ошибка, проверьте данные";
+    }
+
+    if(time < 60 && time >= 0) {
+       return `Это ${hour} часов и ${minutes} минут`
+    }
+
+    if(time < 120 && time >= 60) {
+       return `Это ${hour} час и ${minutes} минут`
+    }
+
+    if(time <= 600 && time >= 120) {
+       return `Это ${hour} часа и ${minutes} минут`
+    }
+
+    console.log(`${hour}:${minutes}`)
+}
+
+getTimeFromMinutes(70)
+
+function findMaxNumber(numbers) {
+    if(numbers.length < 4) {
+        console.log(0)
+        return 0
+    }
+    for (let i = 1; i < numbers.length; i++) {
+        if (typeof(numbers[i]) !== 'number'){
+            console.log(0)
+            return 0
+        }
+    }
+
+    let max = numbers[0];
+    for (let j = 1; j < numbers.length; j++){
+        if (numbers[j] > max) {
+            max = numbers[j]; 
+        }
+
+    }
+    console.log(max)
+    return max
+}
+
+findMaxNumber([1, 2.4, 4.6])
